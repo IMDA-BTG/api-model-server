@@ -56,10 +56,7 @@ def validate_input(input):
 @app.route("/")
 def index():
   return "Hello World"
-
-if __name__ == '__main__': 
-    app.run(host='192.168.0.105') 
-
+  
 #
 # Test cases
 #
