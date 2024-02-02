@@ -56,7 +56,7 @@ def validate_input(input):
 @app.route("/")
 def index():
   return "Hello World"
-  
+
 #
 # Test cases
 #
@@ -82,7 +82,7 @@ def log_and_return_response(response):
   return response;
 
 BEARER_TOKEN = "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYyMmY4MTJiNmJlM2IzMjEyMTQzMjBjZiIsImlhdCI6MTY2MDE5Nzg3MCwiZXhwIjoxNjYyNzg5ODcwfQ.cebsoHVMzV4GGwX-QjHFc5CcTkEy7jLQQLaaHlvN2JU"
-BASIC_TOKEN = "Basic " + base64.b64encode(b'test:p@ssword').decode("utf-8")
+BASIC_TOKEN = "Basic " + base64.b64encode(b'test:p@ssword').decode("utf-8") 
 
 def validate_headers(request, ar):
   for item in ar:
