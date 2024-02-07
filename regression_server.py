@@ -422,7 +422,80 @@ def predict_tc015():
   response = make_response(jsonify(results), 200)
   return log_and_return_response(response)
 
+@app.route('/predict/tc016', methods=["POST"])
+def predict_tc016():  
+  log_request(request)
+  retVal = validate_headers(request, [
+    { "param":"Content-Type", "value":"application/json", "msg":"Invalid Content-Type", "status":500 },
+  ])
+  if retVal is not None:
+    return log_and_return_response(retVal)
+  results = get_array_json(request)
+  results = {
+    "data": results
+  }
+  response = make_response(jsonify(results), 200)
+  return log_and_return_response(response)
 
+@app.route('/predict/tc017', methods=["POST"])
+def predict_tc017():  
+  log_request(request)
+  retVal = validate_headers(request, [
+    { "param":"Content-Type", "value":"application/json", "msg":"Invalid Content-Type", "status":502 },
+  ])
+  if retVal is not None:
+    return log_and_return_response(retVal)
+  results = get_array_json(request)
+  results = {
+    "data": results
+  }
+  response = make_response(jsonify(results), 200)
+  return log_and_return_response(response)
+
+@app.route('/predict/tc018', methods=["POST"])
+def predict_tc018():  
+  log_request(request)
+  retVal = validate_headers(request, [
+    { "param":"Content-Type", "value":"application/json", "msg":"Invalid Content-Type", "status":503 },
+  ])
+  if retVal is not None:
+    return log_and_return_response(retVal)
+  results = get_array_json(request)
+  results = {
+    "data": results
+  }
+  response = make_response(jsonify(results), 200)
+  return log_and_return_response(response)
+
+@app.route('/predict/tc019', methods=["POST"])
+def predict_tc019():  
+  log_request(request)
+  retVal = validate_headers(request, [
+    { "param":"Content-Type", "value":"application/json", "msg":"Invalid Content-Type", "status":504},
+  ])
+  if retVal is not None:
+    return log_and_return_response(retVal)
+  results = get_array_json(request)
+  results = {
+    "data": results
+  }
+  response = make_response(jsonify(results), 200)
+  return log_and_return_response(response)
+
+@app.route('/predict/tc020', methods=["POST"])
+def predict_tc020():  
+  log_request(request)
+  retVal = validate_headers(request, [
+    { "param":"Content-Type", "value":"application/json", "msg":"Invalid Content-Type", "status":429 },
+  ])
+  if retVal is not None:
+    return log_and_return_response(retVal)
+  results = get_array_json(request)
+  results = {
+    "data": results
+  }
+  response = make_response(jsonify(results), 200)
+  return log_and_return_response(response)
 
 # def get_single_batched_request(request):
 #   age =  request.form.getlist('age')
